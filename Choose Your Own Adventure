@@ -1,0 +1,46 @@
+# Nepal Adventure Game
+
+# Introduction and player's name
+name = input("Enter your name: ")
+print("Welcome,", name, "to this Nepal adventure. ")
+
+# First decision: Go left or right
+answer = input("You are on a dirt road, it has come to an end and you can go left or right. Which way would you prefer? (left/right) ")
+
+# Left path
+if answer == "left":
+    answer = input("You come to a river, it’s the mighty Koshi River. You can walk around it or swim across. Type 'walk' to walk around or 'swim' to swim across. ")
+
+    if answer == "swim":
+        print("You tried swimming across but were swept away by the strong currents of the Koshi River. You lose.")
+    
+    elif answer == "walk":
+        print("You walked for many miles, exhausted, but eventually reached a small village in the Terai region. You win!")
+
+    else:
+        print("Not a valid option. You lose.")
+
+# Right path
+elif answer == "right":
+    answer = input("You come to a wobbly suspension bridge over the Kali Gandaki Gorge. Do you want to cross it or head back? (cross/back) ")
+
+    if answer == "cross":
+        answer = input("You carefully cross the bridge and arrive at the Annapurna Base Camp. It's beautiful! Do you want to climb further or stay and rest? (climb/stay) ")
+
+        if answer == "climb":
+            print("You continued climbing, but the weather worsened and you got caught in a blizzard. You lose.")
+        
+        elif answer == "stay":
+            print("You stayed and enjoyed the majestic view of the Himalayas. Congratulations, you win!")
+
+        else:
+            print("Not a valid option. You lose.")
+
+    elif answer == "back":
+        print("You decided to head back and got lost in the dense forests of the Chitwan National Park. You lose.")
+
+    else:
+        print("Not a valid option. You lose.")
+
+else:
+    print("Not a valid option. You lose.")
